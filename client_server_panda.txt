@@ -1,0 +1,260 @@
+username : beasiswa.fkip@unib.ac.id
+password : J0V0vO9YCzB1
+Alessandro S13.45
+https://panda.unib.ac.id/api/login
+Alessandro S13.47
+https://panda.unib.ac.id/panda?token=
+Alessandro S13.53
+https://lucasconstantino.github.io/graphiql-online/
+Alessandro S14.02
+{
+	 mahasiswa(mhsNiu: "G1A018086") {
+	   mhsNiu
+	   mhsNama
+	   mhsProdiKode
+	   mhsAngkatan
+	   mhsJenisKelamin
+	   mhsTanggalLahir
+	   mhsIpkTranskrip
+	   mhsStakmhsrKode
+	   mhsTanggalLulus
+	   mhsSmtaKode
+	   mhsStatusSmta
+	   smaStatus
+	   smaNama
+	   smaKota
+	   smaPropinsi
+	   foto
+     prodi {
+       prodiKode
+       prodiNamaResmi
+       prodiFakKode
+       prodiKodeUniv
+       fakultas {
+         fakKode
+         fakKodeUniv
+         fakNamaResmi
+       }
+     }   
+	 }
+}
+Alessandro S14.12
+ $client = new Client();
+            $res =  $client->post('https://panda.unib.ac.id/api/login', 
+                [
+                    'form_params' => [
+                        'email' => 'ffaradyc@gmail.com', 
+                        'password' => 'abcd12345'
+                    ],
+                ]);
+            $token = json_decode($res->getBody())->token;
+Alessandro S14.16
+ $query = '
+			{
+				portallogin(username:"' . $username . '", password:"' . $password . '") {
+					is_access
+			  		tusrThakrId
+				}
+			}
+		';
+
+
+
+
+FAKULTAS 
+"fakultas": [
+      {
+        "fakKode": "1",
+        "fakKodeUniv": "A",
+        "fakNamaResmi": "KEGURUAN DAN ILMU PENDIDIKAN"
+      },
+      {
+        "fakKode": "2",
+        "fakKodeUniv": "B",
+        "fakNamaResmi": "HUKUM"
+      },
+      {
+        "fakKode": "3",
+        "fakKodeUniv": "C",
+        "fakNamaResmi": "EKONOMI DAN BISNIS"
+      },
+      {
+        "fakKode": "4",
+        "fakKodeUniv": "D",
+        "fakNamaResmi": "ILMU SOSIAL DAN ILMU POLITIK"
+      },
+      {
+        "fakKode": "5",
+        "fakKodeUniv": "E",
+        "fakNamaResmi": "PERTANIAN"
+      },
+      {
+        "fakKode": "6",
+        "fakKodeUniv": "F",
+        "fakNamaResmi": "MATEMATIKA DAN ILMU PENGETAHUAN ALAM"
+      },
+      {
+        "fakKode": "7",
+        "fakKodeUniv": "G",
+        "fakNamaResmi": "TEKNIK"
+      },
+      {
+        "fakKode": "8",
+        "fakKodeUniv": "H",
+        "fakNamaResmi": "KEDOKTERAN DAN ILMU KESEHATAN"
+      },
+      {
+        "fakKode": "9",
+        "fakKodeUniv": "Z",
+        "fakNamaResmi": "KAMPUS MERDEKA"
+      }
+
+PRODI {
+            "prodiKode": "1",
+            "prodiNamaResmi": "BAHASA INGGRIS",
+            "prodiFakKode": "1",
+            "prodiKodeUniv": "A0B0",
+            "prodiJjarKode": "D3",
+            "prodiSahrKode": "A",
+            "prodiModelrId": "1"
+          },
+          {
+            "prodiKode": "252106",
+            "prodiNamaResmi": "PENDIDIKAN BAHASA INDONESIA",
+            "prodiFakKode": "1",
+            "prodiKodeUniv": "A1A0",
+            "prodiJjarKode": "S1",
+            "prodiSahrKode": "A",
+            "prodiModelrId": "1"
+          },
+          {
+            "prodiKode": "252114",
+            "prodiNamaResmi": "PENDIDIKAN BAHASA INGGRIS",
+            "prodiFakKode": "1",
+            "prodiKodeUniv": "A1B0",
+            "prodiJjarKode": "S1",
+            "prodiSahrKode": "A",
+            "prodiModelrId": "1"
+          },
+          {
+            "prodiKode": "251091",
+            "prodiNamaResmi": "PENDIDIKAN MATEMATIKA",
+            "prodiFakKode": "1",
+            "prodiKodeUniv": "A1C0",
+            "prodiJjarKode": "S1",
+            "prodiSahrKode": "A",
+            "prodiModelrId": "1"
+          },
+          {
+            "prodiKode": "251075",
+            "prodiNamaResmi": "PENDIDIKAN BIOLOGI",
+            "prodiFakKode": "1",
+            "prodiKodeUniv": "A1D0",
+            "prodiJjarKode": "S1",
+            "prodiSahrKode": "A",
+            "prodiModelrId": "1"
+          },
+          {
+            "prodiKode": "251061",
+            "prodiNamaResmi": "PENDIDIKAN FISIKA",
+            "prodiFakKode": "1",
+            "prodiKodeUniv": "A1E0",
+            "prodiJjarKode": "S1",
+            "prodiSahrKode": "A",
+            "prodiModelrId": "1"
+          },
+          {
+            "prodiKode": "251083",
+            "prodiNamaResmi": "PENDIDIKAN KIMIA",
+            "prodiFakKode": "1",
+            "prodiKodeUniv": "A1F0",
+            "prodiJjarKode": "S1",
+            "prodiSahrKode": "A",
+            "prodiModelrId": "1"
+          },
+          {
+            "prodiKode": "252122",
+            "prodiNamaResmi": "PENDIDIKAN GURU SEKOLAH DASAR",
+            "prodiFakKode": "1",
+            "prodiKodeUniv": "A1G0",
+            "prodiJjarKode": "S1",
+            "prodiSahrKode": "A",
+            "prodiModelrId": "1"
+          },
+          {
+            "prodiKode": "252144",
+            "prodiNamaResmi": "PENDIDIKAN JASMANI",
+            "prodiFakKode": "1",
+            "prodiKodeUniv": "A1H0",
+            "prodiJjarKode": "S1",
+            "prodiSahrKode": "A",
+            "prodiModelrId": "1"
+          },
+          {
+            "prodiKode": "252136",
+            "prodiNamaResmi": "PENDIDIKAN GURU PAUD",
+            "prodiFakKode": "1",
+            "prodiKodeUniv": "A1I0",
+            "prodiJjarKode": "S1",
+            "prodiSahrKode": "A",
+            "prodiModelrId": "1"
+          },
+          {
+            "prodiKode": "21",
+            "prodiNamaResmi": "S1 (PAUD KERJASAMA)",
+            "prodiFakKode": "1",
+            "prodiKodeUniv": "A1I1",
+            "prodiJjarKode": "S1",
+            "prodiSahrKode": "A",
+            "prodiModelrId": "2"
+          },
+          {
+            "prodiKode": "252093",
+            "prodiNamaResmi": "PENDIDIKAN NONFORMAL",
+            "prodiFakKode": "1",
+            "prodiKodeUniv": "A1J0",
+            "prodiJjarKode": "S1",
+            "prodiSahrKode": "A",
+            "prodiModelrId": "1"
+          },
+          {
+            "prodiKode": "23",
+            "prodiNamaResmi": "MWU",
+            "prodiFakKode": "1",
+            "prodiKodeUniv": "A1K0",
+            "prodiJjarKode": "S1",
+            "prodiSahrKode": "A",
+            "prodiModelrId": "1"
+          },
+          {
+            "prodiKode": "74",
+            "prodiNamaResmi": "BIMBINGAN DAN KONSELING",
+            "prodiFakKode": "1",
+            "prodiKodeUniv": "A1L0",
+            "prodiJjarKode": "S1",
+            "prodiSahrKode": "A",
+            "prodiModelrId": "1"
+          },
+          {
+            "prodiKode": "251092",
+            "prodiNamaResmi": "PENDIDIKAN IPA",
+            "prodiFakKode": "1",
+            "prodiKodeUniv": "A1M0",
+            "prodiJjarKode": "S1",
+            "prodiSahrKode": "A",
+            "prodiModelrId": "1"
+          },
+
+5c87774e4e99b
+
+        "mhsNiu": "C1C020145",
+        "mhsNama": "VIVIN DARISNA",
+        "mhsProdiKode": "252085",
+        "mhsTanggalLahir": "2002-05-15",
+        "mhsLamaStudiSemester": 0,
+        "mhsLamaStudiBulan": null,
+        "mhsStakmhsrKode": "A",
+        "mhsTanggalLulus": null,
+        "mhsSmtaKode": 17020271,
+        "mhsStatusSmta": 1,
+        "mhsAngkatan": 2020

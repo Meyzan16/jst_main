@@ -1,0 +1,27 @@
+ip : 192.168.64.184
+
+ftp : 
+username : fkip_bea
+password : GbKrfHmfsE
+
+database
+dbhost : localhost
+dbname : fkip_bea
+dbusername : fkip_bea
+dbpassword : GbKrfHmfsE
+
+phpmyadmin : 192.168.64.184/phpmyadmin
+
+perpus_unib
+username = unib_bebas
+password = wTILoHsuvP
+
+database
+username = unib_bebas
+password = wTILoHsuvP
+
+
+
+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
+
+git clone https://${toke}:x-oauth-basicgit@github.com:Meyzan16/project-bebaspustaka.e.git
